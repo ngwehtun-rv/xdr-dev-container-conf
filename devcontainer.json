@@ -31,6 +31,7 @@
 				"eamodio.gitlens",
 				"mquandalle.graphql",
 				"Gruntfuggly.todo-tree",
+				"dbaeumer.vscode-eslint",
 				"ms-vscode.vscode-typescript-next"
 			],
 			"settings": {
