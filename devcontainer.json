@@ -1,10 +1,7 @@
 {
 	"name": "CynclairXDR",
-	
-	"build": {
-		"context": "..",
-		"dockerfile": "./Dockerfile"
-	},
+
+	"image": "ngwehtun/dev-xdr:latest",
 
 	"runArgs": [
 		"--name=CynclairXDR",
