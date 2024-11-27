@@ -1,0 +1,41 @@
+{
+	"name": "CynclairXDR",
+
+	"image": "ngwehtun/dev-xdr:latest",
+
+	"runArgs": [
+		"--name=CynclairXDR",
+		"--network=apollo-graphql_default"
+	],
+
+	"mounts": [
+		"source=${localWorkspaceFolder}/.devcontainer/install-dependencies.sh,target=/usr/local/bin/install-dependencies.sh,type=bind"
+	],
+
+	"postCreateCommand": "chmod +x /usr/local/bin/install-dependencies.sh",
+
+	// "features": {
+	// },
+
+	"forwardPorts": [
+		4000,
+		3000
+	],
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"mquandalle.graphql",
+				"Gruntfuggly.todo-tree",
+				"dbaeumer.vscode-eslint",
+				"ms-vscode.vscode-typescript-next"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash"
+			}
+		}
+	},
+
+	// "remoteUser": "devcontainer"
+}
