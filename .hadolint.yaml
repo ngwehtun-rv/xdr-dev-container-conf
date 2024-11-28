@@ -1,0 +1,4 @@
+ignored:
+  - DL3018         # Just want to ignore version on apk add
+  - DL4006         # Just want to ignore shell option
+  - DL3016         # Just want to ignore npm specified version

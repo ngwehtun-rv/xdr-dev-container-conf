@@ -14,9 +14,6 @@
 
 	"postCreateCommand": "chmod +x /usr/local/bin/install-dependencies.sh",
 
-	// "features": {
-	// },
-
 	"forwardPorts": [
 		4000,
 		3000
@@ -25,6 +22,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"GitHub.copilot",
 				"eamodio.gitlens",
 				"mquandalle.graphql",
 				"Gruntfuggly.todo-tree",
@@ -35,7 +33,5 @@
 				"terminal.integrated.defaultProfile.linux": "bash"
 			}
 		}
-	},
-
-	// "remoteUser": "devcontainer"
+	}
 }
