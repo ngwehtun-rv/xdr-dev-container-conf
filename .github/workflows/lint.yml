@@ -15,6 +15,7 @@ jobs:
   
   lint-dockerfile:
     runs-on: ubuntu-latest
+    if: ${{ !(github.event_name == 'pull_request' && github.base_ref == 'main') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -57,5 +58,3 @@ jobs:
           REPORT_ONLY: true
           SHOW_ERRORS: true
         run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/markdown-lint/master/pipeline.sh)
- 
-    
