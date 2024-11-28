@@ -2,7 +2,7 @@
 name: Linting
 
 on:
-  push: 
+  push:
     branches: 
       - prebuild
       - build-local
@@ -40,4 +40,4 @@ jobs:
       
       - name: Lint shell scripts
         run: |
-          find. -type f -name '*.sh' -exec shellcheck {} +
+          find . -type f -name '*.sh' -exec shellcheck {} +
