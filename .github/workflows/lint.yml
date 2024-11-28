@@ -34,10 +34,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up ShellCheck
-        run: |
-          curl -sSL https://github.com/koalaman/shellcheck/releases/download/v0.9.4/shellcheck-v0.9.4.linux -o /usr/local/bin/shellcheck
-          chmod +x /usr/local/bin/shellcheck
+        run: sudo apt install shellcheck
       
       - name: Lint shell scripts
         run: |
-          find . -type f -name '*.sh' -exec /usr/local/bin/shellcheck {} +
+          find . -type f -name '*.sh' -exec shellcheck {} +
