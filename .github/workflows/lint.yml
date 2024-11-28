@@ -15,7 +15,7 @@ jobs:
   
   lint-dockerfile:
     runs-on: ubuntu-latest
-    if: ${{ !(github.event_name == 'pull_request' && github.base_ref == 'main') }}
+    if: ${{ !(github.event_name == 'pull_request' && github.base_ref == 'main') && github.ref_name != 'prebuild' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
