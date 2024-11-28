@@ -40,4 +40,4 @@ jobs:
       
       - name: Lint shell scripts
         run: |
-          find . -type f -name '*.sh' -exec shellcheck {} +
+          find . -type f -name '*.sh' -exec /usr/local/bin/shellcheck {} +
