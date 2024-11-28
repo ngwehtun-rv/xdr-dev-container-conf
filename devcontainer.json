@@ -17,9 +17,6 @@
 
 	"postCreateCommand": "chmod +x /usr/local/bin/install-dependencies.sh",
 
-	// "features": {
-	// },
-
 	"forwardPorts": [
 		4000,
 		3000
@@ -38,7 +35,5 @@
 				"terminal.integrated.defaultProfile.linux": "bash"
 			}
 		}
-	},
-
-	// "remoteUser": "devcontainer"
+	}
 }
