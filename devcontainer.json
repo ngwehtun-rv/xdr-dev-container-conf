@@ -25,6 +25,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"GitHub.copilot",
 				"eamodio.gitlens",
 				"mquandalle.graphql",
 				"Gruntfuggly.todo-tree",
