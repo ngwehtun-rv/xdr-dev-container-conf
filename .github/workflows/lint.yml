@@ -1,0 +1,27 @@
+
+name: Linting
+
+on:
+  push: 
+    branches: 
+      - prebuild
+      - build-local
+  
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  lint-dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Hadolint
+        run: |
+          curl -sSL https://github.com/hadolint/hadolint/releases/download/v2.12.1-beta/hadolint-Linux-x86_64 -o /usr/local/bin/hadolint
+          chmod +x /usr/local/bin/hadolint
+
+      - name: Lint Dockerfile
+        run: hadolint Dockerfile
